@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fzj-aa-YG8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Slack Root View Controller-->
+        <scene sceneID="uEe-th-Irb">
+            <objects>
+                <viewController id="fzj-aa-YG8" customClass="SlackRootViewController" customModule="DrawerSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UO9-Hf-OoG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAI-5U-cNz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="B2D-fW-QmE" kind="embed" identifier="toDrawer" id="pH4-hE-RRV"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vb1-to-g8t">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="WBf-pP-FHh" kind="embed" identifier="toMain" id="Pd3-Qk-cvm"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vb1-to-g8t" firstAttribute="width" secondItem="UO9-Hf-OoG" secondAttribute="width" id="F9P-rr-4lf"/>
+                            <constraint firstItem="CAI-5U-cNz" firstAttribute="width" secondItem="UO9-Hf-OoG" secondAttribute="width" id="UKC-Dz-YzZ"/>
+                            <constraint firstItem="Vb1-to-g8t" firstAttribute="leading" secondItem="mt2-cm-715" secondAttribute="leading" id="aWa-Ab-qOm"/>
+                            <constraint firstItem="Vb1-to-g8t" firstAttribute="top" secondItem="UO9-Hf-OoG" secondAttribute="top" id="flN-wb-UYK"/>
+                            <constraint firstItem="mt2-cm-715" firstAttribute="bottom" secondItem="CAI-5U-cNz" secondAttribute="bottom" id="gbw-io-pbF"/>
+                            <constraint firstItem="CAI-5U-cNz" firstAttribute="top" secondItem="UO9-Hf-OoG" secondAttribute="top" id="pfl-0B-gAa"/>
+                            <constraint firstItem="CAI-5U-cNz" firstAttribute="leading" secondItem="mt2-cm-715" secondAttribute="leading" id="xPG-9a-qqa"/>
+                            <constraint firstItem="mt2-cm-715" firstAttribute="bottom" secondItem="Vb1-to-g8t" secondAttribute="bottom" id="yUn-7y-Rk0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mt2-cm-715"/>
+                    </view>
+                    <connections>
+                        <outlet property="drawerContainer" destination="CAI-5U-cNz" id="J5H-pA-asR"/>
+                        <outlet property="drawerLeading" destination="xPG-9a-qqa" id="y25-Uc-xUi"/>
+                        <outlet property="mainContainer" destination="Vb1-to-g8t" id="FbI-eE-JzK"/>
+                        <outlet property="mainLeading" destination="aWa-Ab-qOm" id="uOk-Xm-2zo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M9U-ds-62L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="259"/>
+        </scene>
+        <!--Drawer-->
+        <scene sceneID="lYk-qz-mxT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Drawer" id="B2D-fW-QmE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6A8-ms-DFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="112"/>
+        </scene>
+        <!--MainContents-->
+        <scene sceneID="8Zg-Ne-dyj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MainContents" id="WBf-pP-FHh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HLB-bp-F5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989" y="282"/>
+        </scene>
+    </scenes>
+</document>

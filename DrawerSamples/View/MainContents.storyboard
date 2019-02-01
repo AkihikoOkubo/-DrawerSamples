@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f11-yt-eg6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Contents View Controller-->
+        <scene sceneID="pjw-H9-0vN">
+            <objects>
+                <viewController id="f11-yt-eg6" customClass="MainContentsViewController" customModule="DrawerSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v6e-Ur-vqF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inp-xV-BWR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77T-m3-jq3">
+                                        <rect key="frame" x="16" y="17" width="49" height="30"/>
+                                        <state key="normal" title="Drawer"/>
+                                        <connections>
+                                            <action selector="showDrawer:" destination="f11-yt-eg6" eventType="touchUpInside" id="kid-o8-pBZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="77T-m3-jq3" firstAttribute="leading" secondItem="inp-xV-BWR" secondAttribute="leading" constant="16" id="231-eU-KL0"/>
+                                    <constraint firstAttribute="height" constant="64" id="Cq2-rV-9oJ"/>
+                                    <constraint firstItem="77T-m3-jq3" firstAttribute="centerY" secondItem="inp-xV-BWR" secondAttribute="centerY" id="htI-0T-Ksn"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Heb-Lh-HZG">
+                                <rect key="frame" x="72.5" y="309.5" width="230" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKL-qh-47N">
+                                <rect key="frame" x="152.5" y="567" width="70" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="&lt;- Back"/>
+                                <connections>
+                                    <action selector="backAction:" destination="f11-yt-eg6" eventType="touchUpInside" id="AU3-uR-Rik"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UKL-qh-47N" firstAttribute="centerX" secondItem="v6e-Ur-vqF" secondAttribute="centerX" id="2Pm-dn-Ifr"/>
+                            <constraint firstItem="Heb-Lh-HZG" firstAttribute="centerY" secondItem="v6e-Ur-vqF" secondAttribute="centerY" id="9dA-Dd-3tH"/>
+                            <constraint firstItem="inp-xV-BWR" firstAttribute="top" secondItem="v6e-Ur-vqF" secondAttribute="top" id="LYv-7Y-yBU"/>
+                            <constraint firstItem="inp-xV-BWR" firstAttribute="trailing" secondItem="mVm-qf-FFL" secondAttribute="trailing" id="Nek-QB-3Qo"/>
+                            <constraint firstItem="Heb-Lh-HZG" firstAttribute="centerX" secondItem="v6e-Ur-vqF" secondAttribute="centerX" id="aeU-yZ-ipn"/>
+                            <constraint firstItem="inp-xV-BWR" firstAttribute="leading" secondItem="mVm-qf-FFL" secondAttribute="leading" id="u9e-d3-R21"/>
+                            <constraint firstItem="mVm-qf-FFL" firstAttribute="bottom" secondItem="UKL-qh-47N" secondAttribute="bottom" constant="64" id="vrV-tC-x2W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mVm-qf-FFL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KjB-sS-Oz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165.59999999999999" y="186.65667166416793"/>
+        </scene>
+    </scenes>
+</document>

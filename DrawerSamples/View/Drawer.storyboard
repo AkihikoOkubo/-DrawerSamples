@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LTs-ew-gjQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drawer View Controller-->
+        <scene sceneID="qgB-bt-4HT">
+            <objects>
+                <viewController id="LTs-ew-gjQ" customClass="DrawerViewController" customModule="DrawerSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vha-Iz-Ikz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vlu-ri-em4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UA-8B-CfO">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DrawerContent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhn-UB-z1r">
+                                        <rect key="frame" x="7.5" y="309.5" width="285" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.2470588235" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Lhn-UB-z1r" firstAttribute="centerY" secondItem="1UA-8B-CfO" secondAttribute="centerY" id="R75-aP-ZHY"/>
+                                    <constraint firstItem="Lhn-UB-z1r" firstAttribute="centerX" secondItem="1UA-8B-CfO" secondAttribute="centerX" id="r3z-0h-O0o"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vlu-ri-em4" firstAttribute="leading" secondItem="UMv-6g-ayO" secondAttribute="leading" id="Fov-Gh-kje"/>
+                            <constraint firstItem="Vlu-ri-em4" firstAttribute="top" secondItem="vha-Iz-Ikz" secondAttribute="top" id="FzO-F4-bvf"/>
+                            <constraint firstItem="1UA-8B-CfO" firstAttribute="leading" secondItem="UMv-6g-ayO" secondAttribute="leading" id="Jk9-t5-eCy"/>
+                            <constraint firstItem="1UA-8B-CfO" firstAttribute="bottom" secondItem="UMv-6g-ayO" secondAttribute="bottom" id="ZAq-IE-T79"/>
+                            <constraint firstItem="UMv-6g-ayO" firstAttribute="trailing" secondItem="Vlu-ri-em4" secondAttribute="trailing" id="dGi-4r-V0e"/>
+                            <constraint firstItem="1UA-8B-CfO" firstAttribute="width" secondItem="vha-Iz-Ikz" secondAttribute="width" multiplier="0.8" id="uZ7-uM-g70"/>
+                            <constraint firstItem="1UA-8B-CfO" firstAttribute="top" secondItem="vha-Iz-Ikz" secondAttribute="top" id="vZx-bG-KOs"/>
+                            <constraint firstItem="UMv-6g-ayO" firstAttribute="bottom" secondItem="Vlu-ri-em4" secondAttribute="bottom" id="xiU-nE-9Ld"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UMv-6g-ayO"/>
+                    </view>
+                    <connections>
+                        <outlet property="overlay" destination="Vlu-ri-em4" id="xbQ-SN-tPs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K37-cY-e5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181.59999999999999" y="160.56971514242881"/>
+        </scene>
+    </scenes>
+</document>

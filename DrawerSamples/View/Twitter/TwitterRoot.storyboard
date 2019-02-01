@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TaL-Si-RPk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Twitter Root View Controller-->
+        <scene sceneID="1Hj-4a-ClO">
+            <objects>
+                <viewController id="TaL-Si-RPk" customClass="TwitterRootViewController" customModule="DrawerSamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aZa-CY-id2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivz-Lt-tfb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="01Z-oQ-go8" kind="embed" identifier="toMain" id="CQx-lr-Wbc"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYz-ch-TBV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="wPv-hB-5FV" kind="embed" identifier="toDrawer" id="il2-XG-Riv"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LYz-ch-TBV" firstAttribute="width" secondItem="aZa-CY-id2" secondAttribute="width" id="1w7-ow-tCE"/>
+                            <constraint firstItem="i0K-vz-tjg" firstAttribute="bottom" secondItem="LYz-ch-TBV" secondAttribute="bottom" id="LDC-oR-NZr"/>
+                            <constraint firstItem="Ivz-Lt-tfb" firstAttribute="top" secondItem="aZa-CY-id2" secondAttribute="top" id="Lg1-yU-NbK"/>
+                            <constraint firstItem="LYz-ch-TBV" firstAttribute="leading" secondItem="i0K-vz-tjg" secondAttribute="leading" id="ZBW-Wz-4zG"/>
+                            <constraint firstItem="i0K-vz-tjg" firstAttribute="bottom" secondItem="Ivz-Lt-tfb" secondAttribute="bottom" id="a96-Dn-yD5"/>
+                            <constraint firstItem="Ivz-Lt-tfb" firstAttribute="leading" secondItem="i0K-vz-tjg" secondAttribute="leading" id="c6k-i7-wBK"/>
+                            <constraint firstItem="LYz-ch-TBV" firstAttribute="top" secondItem="aZa-CY-id2" secondAttribute="top" id="eGD-YR-QSg"/>
+                            <constraint firstItem="Ivz-Lt-tfb" firstAttribute="width" secondItem="aZa-CY-id2" secondAttribute="width" id="kla-di-yG2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i0K-vz-tjg"/>
+                    </view>
+                    <connections>
+                        <outlet property="drawerConteiner" destination="LYz-ch-TBV" id="0DD-zQ-7cD"/>
+                        <outlet property="drawerLeading" destination="ZBW-Wz-4zG" id="13u-Yc-y4S"/>
+                        <outlet property="mainContainer" destination="Ivz-Lt-tfb" id="7H0-lr-SsI"/>
+                        <outlet property="mainLeading" destination="c6k-i7-wBK" id="HCb-Wz-jFK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2RM-qq-SGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153" y="132"/>
+        </scene>
+        <!--Drawer-->
+        <scene sceneID="sJR-Yz-Gw0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Drawer" id="wPv-hB-5FV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Duw-x8-4ks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="-76"/>
+        </scene>
+        <!--MainContents-->
+        <scene sceneID="dp2-da-phg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MainContents" id="01Z-oQ-go8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c8r-Rh-mUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="151"/>
+        </scene>
+    </scenes>
+</document>
